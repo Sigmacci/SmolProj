@@ -1,0 +1,18 @@
+<div class="container center bg-primary col-md-8 rounded" style="padding-left: 50px;">
+    <br>
+    <h4 class="center text-success">Internal server error - refreshing the page will make it disappear</h4>
+    <ng-container *ngIf="error">
+        <h5 class="text-light">Error: {{error.message}}</h5>
+        <p class="font-weight-bold">Angualar is not to blame</p>
+        <p>What to do?</p>
+        <ol>
+            <li>Check the request in network tab</li>
+            <li>Examine ther request URL</li>
+            <li>Reproduce the problem in Postman</li>
+        </ol>
+    </ng-container>
+    <code class="mt-5" style="background-color: black;">
+        {{error.details}}
+    </code>
+    <br>
+</div>
