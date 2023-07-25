@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AccountService } from '../_services/account.service';
 import { Route, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-nav',
@@ -11,6 +12,7 @@ import { ToastrService } from 'ngx-toastr';
 export class NavComponent implements OnInit {
 
   model: any = {}
+  baseUrl: string = environment.apiUrl;
 
   constructor(public accountService: AccountService, private router: Router, private toastr: ToastrService) { }
 
