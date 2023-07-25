@@ -11,7 +11,7 @@ import { environment } from 'src/environments/environment';
 })
 export class NavComponent implements OnInit {
 
-  model: any = {}
+  model: any = {};
   baseUrl: string = environment.apiUrl;
 
   constructor(public accountService: AccountService, private router: Router, private toastr: ToastrService) { }
